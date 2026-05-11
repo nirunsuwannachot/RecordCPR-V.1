@@ -72,6 +72,8 @@
                     <div id="guidance-text" class="text-slate-400 text-[10px] italic leading-tight">Waiting...</div>
                 </div>
             </div>
+ <!-- Start / Pause Button -->
+            <button onclick="toggleStart()" id="btn-start" class="w-full bg-emerald-600 py-3 mb-3 rounded-xl font-black text-sm uppercase shadow-lg border-b-4 border-emerald-800 active:border-b-0 transition-all">Start Code Blue</button>
 
             <!-- Rhythm Selection (4 Buttons) -->
             <div class="grid grid-cols-2 gap-2">
