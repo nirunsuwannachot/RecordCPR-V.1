@@ -73,10 +73,16 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-3 gap-2">
-                <button onclick="toggleStart()" id="btn-start" class="bg-emerald-600 py-2.5 rounded-lg font-black text-[10px] uppercase shadow-lg">Start</button>
-                <button onclick="setRhythm('Shockable')" class="bg-rose-700 py-2.5 rounded-lg font-black text-[10px] uppercase shadow-lg">Shockable</button>
-                <button onclick="setRhythm('Non-Shockable')" class="bg-blue-700 py-2.5 rounded-lg font-black text-[10px] uppercase shadow-lg">Non-Shock</button>
+            <!-- Rhythm Selection (4 Buttons) -->
+            <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="setRhythm('VF')" class="bg-rose-700 py-3 rounded-xl font-black text-xs uppercase shadow-lg border-b-4 border-rose-950 active:border-b-0">VF</button>
+                    <button onclick="setRhythm('pVT')" class="bg-rose-500 py-3 rounded-xl font-black text-xs uppercase shadow-lg border-b-4 border-rose-800 active:border-b-0">pVT</button>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="setRhythm('PEA')" class="bg-blue-700 py-3 rounded-xl font-black text-xs uppercase shadow-lg border-b-4 border-blue-950 active:border-b-0">PEA</button>
+                    <button onclick="setRhythm('Asystole')" class="bg-sky-600 py-3 rounded-xl font-black text-xs uppercase shadow-lg border-b-4 border-sky-800 active:border-b-0">Asystole</button>
+                </div>
             </div>
         </div>
 
