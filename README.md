@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -117,7 +115,7 @@
                 <div class="bg-rose-600 text-white flex-1 py-1 rounded-xl text-center"><p class="text-[7px] uppercase leading-none mt-1">Shock</p><p id="dash-shock" class="text-xl font-black">0</p></div>
                 <div class="bg-blue-600 text-white flex-1 py-1 rounded-xl text-center"><p class="text-[7px] uppercase leading-none mt-1">Epi</p><p id="dash-epi" class="text-xl font-black">0</p></div>
             </div>
-            <button onclick="showSummary('CLOSE')" class="flex-1 bg-slate-800 text-white py-4 rounded-xl font-black text-[9px] uppercase">Close Case</button>
+            <button onclick="showSummary('DEAD')" class="flex-1 bg-slate-800 text-white py-4 rounded-xl font-black text-[9px] uppercase">Close Case</button>
         </div>
     </div>
 
@@ -170,12 +168,12 @@
             const btn = document.getElementById('btn-start');
             if (!isRunning) {
                 isRunning = true; btn.innerText = 'PAUSE'; btn.className = 'bg-amber-600 py-2.5 rounded-lg font-black text-[10px] uppercase shadow-lg';
-                if (totalSec === 0) recordAction('🚀 Code Blue Activated');
+                if (totalSec === 0) recordAction(' Code Blue Activated');
                 mainInterval = setInterval(() => {
                     totalSec++; cprSec--;
                     document.getElementById('total-timer').innerText = formatTime(totalSec);
                     document.getElementById('cpr-timer').innerText = formatTime(cprSec);
-                    if (cprSec <= 0) { cprSec = 120; recordAction('⚠️ Rhythm Check Due!'); }
+                    if (cprSec <= 0) { cprSec = 120; recordAction(' Rhythm Check Due!'); }
                 }, 1000);
             } else {
                 isRunning = false; btn.innerText = 'RESUME'; btn.className = 'bg-emerald-600 py-2.5 rounded-lg font-black text-[10px] uppercase shadow-lg';
